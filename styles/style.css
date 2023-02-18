@@ -1,0 +1,379 @@
+/* fontes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+/* Reset de inicialização */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* variaveis familia de fontes */
+    --font-title:'Montserrat', sans-serif;
+    --font-sub-title:'Montserrat', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+	/* Variáveis para cores */
+	--color-first: #363636;
+	--color-second: #ccc;
+	--color-third: #eee;
+    --color-fourth:#aaa;
+	/* Variaveis de fontes */
+	--size-title: 3.5rem;
+	--size-sub-title: 2.5rem;
+	--size-text: 1.5rem;
+	--line-title: 4.5rem;
+	--line-sub-title: 4rem;
+	--line-text: 2rem;
+}
+body{
+    font-family: var(--font-text);
+}
+html{
+    scroll-behavior: smooth;
+}
+.wrapper{
+    max-width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+
+}
+.content__title{
+    font-family: var(--font-title);
+    font-size: var(--size-title);
+    line-height: var(--line-title);
+}
+.content__sub-title{
+    font-family: var(--font-sub-title);
+    font-size: var(--size-sub-title);
+    line-height: var(--line-sub-title);
+    font-weight: 600;
+}
+.content__text{
+    font-family: var(--font-text);
+    font-size: var(--size-text);
+    line-height: var(--line-text);
+}
+/* cabeçalho */
+header{
+    background-color: var(--color-first);
+    padding: 1.5rem 0;
+    position: fixed;
+	left: 0px;
+	top: 0px;
+	z-index: 10;
+    width: 100%;
+
+}
+header .logo{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+header .logo img{
+    width: 20%;
+}
+header .logo h1{
+    font-family: var(--font-title);
+    font-size: var(--size-sub-title);
+    color: var(--color-third);
+}
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+header nav .link{
+    text-decoration: none;
+    font-family: var(--font-subtitles);
+    font-size: var(--size-text);
+    color: var(--color-third);
+}
+/* Corpo */
+.container{
+    padding: 6rem;
+}
+/* Home */
+#home{
+    background: linear-gradient(45deg, var(--color-first), var(--color-fourth), var(--color-second));
+    /* background-color: var(--color-first); */
+    height: 100vh;
+}
+#home .wrapper{
+    flex-direction: column;
+    padding-top: 8rem;
+}
+#home .content{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    padding-bottom: 3rem;
+    gap: 10rem;
+    color: var(--color-third);
+}
+#home .content .text h2{
+    padding-bottom: 2rem;
+}
+#home .content .text p{
+    text-align: justify;
+}
+#home .content img{
+	width: 400px;    
+}
+#home .wrapper form{
+    display: flex;
+    gap: 1rem;
+
+}
+#home .wrapper form input{
+    font-family: var(--font-text);
+    font-size: var(--size-text);
+	line-height: var(--line-text);
+	padding: 0.75rem 1.25rem;
+	border-radius: 1rem;
+	outline: none;
+}
+#home .wrapper form input[type="submit"]{
+    cursor: pointer;
+    width: 120px;
+}   
+/* About */
+#about{
+    background-color: var(--color-third);
+    height: 100vh;
+}
+#about .wrapper{
+    gap: 2rem;
+}
+#about .card{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#about .card .image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 4rem;
+    background-color: var(--color-second);
+}
+#about .card .image img{
+    width: 200px;
+	height: 150px;
+}
+#about article h2{
+    line-height: 3rem;
+    text-align: justify;
+    padding-bottom: 2rem;
+}
+#about article p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+}
+/* Posts */
+#posts{
+    background-color: var(--color-second);
+}
+#posts .wrapper{
+    gap: 4rem;
+}
+#posts .content__left{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+#posts .content__left .card{
+    height: 120px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+#posts .content__left .card picture{
+    width: 30%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    background-color: var(--color-fourth);
+}
+#posts .content__left .card img{
+    width: 50%;
+}
+#posts .content__left .card p{
+    width: 70%;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: justify;
+}
+#posts .content__right h2{
+    width: 70%;
+    margin-bottom: 2rem;    
+}
+#posts .content__right .photos{
+    display: flex;
+    width: 800px;
+    gap: 2rem;
+}
+#posts .content__right .photos picture{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--color-fourth);
+}
+#posts .content__right .photos img{
+    width: 50%;
+}
+/* Steps */
+#steps{
+    background-color: var(--color-first);
+}
+#steps .wrapper{
+    flex-direction: column;
+    gap: 2rem;
+}
+#steps .title{
+    text-align: center;
+    color: var(--color-third);
+}
+#steps .box{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+#steps .box .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    color: var(--color-third);
+}
+#steps .box .card picture{
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-second);
+}
+#steps .box .card img{
+    width: 50%;
+}
+/* Advantage */
+#advantage{
+    background-color: var(--color-second);
+}
+#advantage .wrapper{
+    flex-direction: column;
+    gap: 2rem;
+}
+#advantage .title{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#advantage .box{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+#advantage .box .card{
+    width: 48%;
+    display: flex;
+    padding: 1rem;
+	transition: 0.3s;
+    background-color: var(--color-third);
+    border-radius: 1rem;
+	border: 2px solid transparent;
+}
+#advantage .box .card:hover{
+    border: 2px solid var(--color-third);
+	transform: scale(1.05);
+}
+#advantage .box .card picture{
+    height: 120px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--color-second);
+    margin: 1rem;
+}
+#advantage .box .card img{
+    width: 50%;
+}
+#advantage .box .card p{
+    width: 80%;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    padding-right: 3rem;
+}
+#offer{
+    background-color: var(--color-third);
+}
+#offer .wrapper{
+    align-items: center;
+    justify-content: center;
+}
+#offer .box{
+    width: 80%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--color-first);
+    border-radius: 1rem;
+    padding: 3rem;
+    color: var(--color-third);
+    text-align: center;
+}
+#offer form{
+    display: flex;
+    gap: 2rem;
+}
+#offer form input{
+    font-family: var(--font-text);
+    font-size: var(--size-text);
+	line-height: var(--line-text);
+	padding: 0.75rem 1.25rem;
+	border-radius: 1rem;
+	outline: none;
+}
+footer{
+    background-color: var(--color-first);
+    padding: 1.5rem 0;  
+}
+footer .wrapper{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: var(--color-third);
+}
+footer .logo{
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+footer .logo img{
+    width: 20%;
+}
+footer .logo h2{
+    font-family: var(--font-title);
+    font-size: var(--size-sub-title);
+}
